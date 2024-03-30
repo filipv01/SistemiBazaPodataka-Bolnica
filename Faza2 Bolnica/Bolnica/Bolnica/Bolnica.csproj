@@ -1,0 +1,519 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{58EA5C72-A62A-470D-9B65-77F309E18AE0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Bolnica</RootNamespace>
+    <AssemblyName>Bolnica</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr3.Runtime.3.5.1\lib\net40-client\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentNHibernate, Version=3.2.0.0, Culture=neutral, PublicKeyToken=8aa435e3cb308880, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentNHibernate.3.2.0\lib\net461\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iesi.Collections.4.0.4\lib\net461\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=5.3.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.5.3.3\lib\net461\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.21.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.21.10.0\lib\net462\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Linq, Version=2.2.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Remotion.Linq.2.2.0\lib\net45\Remotion.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Linq.EagerFetching, Version=2.2.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Remotion.Linq.EagerFetching.2.2.0\lib\net45\Remotion.Linq.EagerFetching.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Text.Encodings.Web, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.6.0.0\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=6.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.6.0.1\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NForme\AmbulantaUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NForme\AmbulantaUI.Designer.cs">
+      <DependentUpon>AmbulantaUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NForme\AzurirajAmb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NForme\AzurirajAmb.Designer.cs">
+      <DependentUpon>AzurirajAmb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataLayer.cs" />
+    <Compile Include="NForme\AzurirajOdeljenje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NForme\AzurirajOdeljenje.designer.cs">
+      <DependentUpon>AzurirajOdeljenje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NForme\AzurirajOdrzavaHigijenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NForme\AzurirajOdrzavaHigijenu.Designer.cs">
+      <DependentUpon>AzurirajOdrzavaHigijenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NForme\AzurirajStac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NForme\AzurirajStac.designer.cs">
+      <DependentUpon>AzurirajStac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NForme\AzurirajStolicu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NForme\AzurirajStolicu.designer.cs">
+      <DependentUpon>AzurirajStolicu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NForme\AzurirajTehnicko.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NForme\AzurirajTehnicko.Designer.cs">
+      <DependentUpon>AzurirajTehnicko.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NForme\DodajHigijenicara.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NForme\DodajHigijenicara.designer.cs">
+      <DependentUpon>DodajHigijenicara.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NForme\DodajOdeljenje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NForme\DodajOdeljenje.designer.cs">
+      <DependentUpon>DodajOdeljenje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NForme\DodajStacionara.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NForme\DodajStacionara.designer.cs">
+      <DependentUpon>DodajStacionara.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NForme\DodajStolicu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NForme\DodajStolicu.designer.cs">
+      <DependentUpon>DodajStolicu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NForme\DodajTehnicara.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NForme\DodajTehnicara.designer.cs">
+      <DependentUpon>DodajTehnicara.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\DTOManager.cs" />
+    <Compile Include="NForme\FormaDodajAmbulanta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NForme\FormaDodajAmbulanta.designer.cs">
+      <DependentUpon>FormaDodajAmbulanta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NForme\FormaStomatologUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NForme\FormaStomatologUpdate.Designer.cs">
+      <DependentUpon>FormaStomatologUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\MedicinskoOsobljeDTO.cs" />
+    <Compile Include="DTO\NemedicinskoOsobljeDTO.cs" />
+    <Compile Include="DTO\OdeljenjeDTO.cs" />
+    <Compile Include="DTO\OdrzavaHigijenuDTO.cs" />
+    <Compile Include="DTO\OsobaDTO.cs" />
+    <Compile Include="DTO\PacijentDTO.cs" />
+    <Compile Include="DTO\StomatoloskaStolicaDTO.cs" />
+    <Compile Include="NForme\FormHigijenicarUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NForme\FormHigijenicarUpdate.Designer.cs">
+      <DependentUpon>FormHigijenicarUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NForme\FormOPdodaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NForme\FormOPdodaj.Designer.cs">
+      <DependentUpon>FormOPdodaj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NForme\FormOPupdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NForme\FormOPupdate.Designer.cs">
+      <DependentUpon>FormOPupdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NForme\FormSpecdodaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NForme\FormSpecdodaj.Designer.cs">
+      <DependentUpon>FormSpecdodaj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NForme\FormSpecUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NForme\FormSpecUpdate.Designer.cs">
+      <DependentUpon>FormSpecUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NForme\HigijenicarUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NForme\HigijenicarUI.designer.cs">
+      <DependentUpon>HigijenicarUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NForme\MedOsoba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NForme\MedOsoba.Designer.cs">
+      <DependentUpon>MedOsoba.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NForme\FormaStomatolog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NForme\FormaStomatolog.Designer.cs">
+      <DependentUpon>FormaStomatolog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entiteti\MedicinskoOsoblje.cs" />
+    <Compile Include="Entiteti\NemedicinskoOsoblje.cs" />
+    <Compile Include="Entiteti\Odeljenje.cs" />
+    <Compile Include="Entiteti\OdrzavaHigijenu.cs" />
+    <Compile Include="Entiteti\Osoba.cs" />
+    <Compile Include="Entiteti\Pacijent.cs" />
+    <Compile Include="Entiteti\StomatoloskaStolica.cs" />
+    <Compile Include="NForme\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NForme\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mapiranja\MedicinskoOsobljeMapiranje.cs" />
+    <Compile Include="Mapiranja\NemedicinskoOsobljeMapiranje.cs" />
+    <Compile Include="Mapiranja\OdeljenjeMapiranje.cs" />
+    <Compile Include="Mapiranja\OdrzavaHigijenuMapiranje.cs" />
+    <Compile Include="Mapiranja\OsobaMapiranje.cs" />
+    <Compile Include="Mapiranja\PacijentMapiranje.cs" />
+    <Compile Include="Mapiranja\StomatoloskaStolicaMapiranje.cs" />
+    <Compile Include="NForme\MoreHigijenicar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NForme\MoreHigijenicar.Designer.cs">
+      <DependentUpon>MoreHigijenicar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NForme\MoreOdeljenje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NForme\MoreOdeljenje.Designer.cs">
+      <DependentUpon>MoreOdeljenje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NForme\MoreSpecijalista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NForme\MoreSpecijalista.Designer.cs">
+      <DependentUpon>MoreSpecijalista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NForme\MoreTehnicko.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NForme\MoreTehnicko.Designer.cs">
+      <DependentUpon>MoreTehnicko.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NForme\NeMedOsoba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NForme\NeMedOsoba.designer.cs">
+      <DependentUpon>NeMedOsoba.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NForme\OdeljenjeUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NForme\OdeljenjeUI.Designer.cs">
+      <DependentUpon>OdeljenjeUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NForme\OdrzavaHigijenuUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NForme\OdrzavaHigijenuUI.designer.cs">
+      <DependentUpon>OdrzavaHigijenuUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NForme\OpstaPraksaUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NForme\OpstaPraksaUI.Designer.cs">
+      <DependentUpon>OpstaPraksaUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NForme\Pacijenti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NForme\Pacijenti.Designer.cs">
+      <DependentUpon>Pacijenti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="NForme\SpecijalistaUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NForme\SpecijalistaUI.Designer.cs">
+      <DependentUpon>SpecijalistaUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NForme\StacionarUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NForme\StacionarUI.designer.cs">
+      <DependentUpon>StacionarUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NForme\StomatologUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NForme\StomatologUI.Designer.cs">
+      <DependentUpon>StomatologUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NForme\StomatoloskaStolicaUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NForme\StomatoloskaStolicaUI.Designer.cs">
+      <DependentUpon>StomatoloskaStolicaUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NForme\TehnickoOsobljeUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NForme\TehnickoOsobljeUI.designer.cs">
+      <DependentUpon>TehnickoOsobljeUI.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="NForme\AmbulantaUI.resx">
+      <DependentUpon>AmbulantaUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NForme\AzurirajAmb.resx">
+      <DependentUpon>AzurirajAmb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NForme\AzurirajOdeljenje.resx">
+      <DependentUpon>AzurirajOdeljenje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NForme\AzurirajOdrzavaHigijenu.resx">
+      <DependentUpon>AzurirajOdrzavaHigijenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NForme\AzurirajStac.resx">
+      <DependentUpon>AzurirajStac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NForme\AzurirajStolicu.resx">
+      <DependentUpon>AzurirajStolicu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NForme\AzurirajTehnicko.resx">
+      <DependentUpon>AzurirajTehnicko.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NForme\DodajHigijenicara.resx">
+      <DependentUpon>DodajHigijenicara.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NForme\DodajOdeljenje.resx">
+      <DependentUpon>DodajOdeljenje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NForme\DodajStacionara.resx">
+      <DependentUpon>DodajStacionara.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NForme\DodajStolicu.resx">
+      <DependentUpon>DodajStolicu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NForme\DodajTehnicara.resx">
+      <DependentUpon>DodajTehnicara.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NForme\FormaDodajAmbulanta.resx">
+      <DependentUpon>FormaDodajAmbulanta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NForme\FormaStomatologUpdate.resx">
+      <DependentUpon>FormaStomatologUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NForme\FormHigijenicarUpdate.resx">
+      <DependentUpon>FormHigijenicarUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NForme\FormOPdodaj.resx">
+      <DependentUpon>FormOPdodaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NForme\FormOPupdate.resx">
+      <DependentUpon>FormOPupdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NForme\FormSpecdodaj.resx">
+      <DependentUpon>FormSpecdodaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NForme\FormSpecUpdate.resx">
+      <DependentUpon>FormSpecUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NForme\HigijenicarUI.resx">
+      <DependentUpon>HigijenicarUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NForme\MedOsoba.resx">
+      <DependentUpon>MedOsoba.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NForme\FormaStomatolog.resx">
+      <DependentUpon>FormaStomatolog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NForme\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NForme\MoreHigijenicar.resx">
+      <DependentUpon>MoreHigijenicar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NForme\MoreOdeljenje.resx">
+      <DependentUpon>MoreOdeljenje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NForme\MoreSpecijalista.resx">
+      <DependentUpon>MoreSpecijalista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NForme\MoreTehnicko.resx">
+      <DependentUpon>MoreTehnicko.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NForme\NeMedOsoba.resx">
+      <DependentUpon>NeMedOsoba.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NForme\OdeljenjeUI.resx">
+      <DependentUpon>OdeljenjeUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NForme\OdrzavaHigijenuUI.resx">
+      <DependentUpon>OdrzavaHigijenuUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NForme\OpstaPraksaUI.resx">
+      <DependentUpon>OpstaPraksaUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NForme\Pacijenti.resx">
+      <DependentUpon>Pacijenti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="NForme\SpecijalistaUI.resx">
+      <DependentUpon>SpecijalistaUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NForme\StacionarUI.resx">
+      <DependentUpon>StacionarUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NForme\StomatologUI.resx">
+      <DependentUpon>StomatologUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NForme\StomatoloskaStolicaUI.resx">
+      <DependentUpon>StomatoloskaStolicaUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NForme\TehnickoOsobljeUI.resx">
+      <DependentUpon>TehnickoOsobljeUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Oracle.DataAccess.Common.Configuration.Section.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Oracle.ManagedDataAccess.Client.Configuration.Section.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\doctor.png" />
+    <Content Include="Resources\doctor3.png" />
+    <Content Include="Resources\HospitalBasic.jpg" />
+    <Content Include="Resources\LogoBolnica.ico" />
+    <Content Include="Resources\LogoBolnica.png" />
+    <Content Include="Resources\pngegg %281%29.png" />
+    <Content Include="Resources\doctorZaFormu.png" />
+    <Content Include="Resources\pacijent.png" />
+    <Content Include="Resources\Opsta praksa.png" />
+    <Content Include="Resources\pngegg %2812%29.png" />
+    <Content Include="Resources\pngegg %2813%29.png" />
+    <Content Include="Resources\Stomatolog.png" />
+    <Content Include="Resources\Specijalista.png" />
+    <Content Include="Resources\Stetoskop manji.png" />
+    <Content Include="Resources\Stetoskop 100px.png" />
+    <Content Include="Resources\tehnicar.png" />
+    <Content Include="Resources\higijenicar.png" />
+    <Content Include="Resources\pngegg-_3_.ico" />
+    <Content Include="Resources\PocetnaBolnica.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Text.Json.6.0.1\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.1\build\System.Text.Json.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Text.Json.6.0.1\build\System.Text.Json.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Text.Json.6.0.1\build\System.Text.Json.targets'))" />
+  </Target>
+</Project>

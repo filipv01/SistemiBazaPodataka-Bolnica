@@ -1,0 +1,10 @@
+Za dodavanje je potrebno kliknuti na dugme koje je naznačno
+Za ažuriranje i brisanje je potrebno prvo selektovati šta želimo da ažuriramo/obrišemo iz liste, zatim kliknuti na dugme
+Za Održavanje higijene (zaduženja), ažuriranje i brisanje se rade standardno,a dodavanje se vrši tako što se selektuje jedan objekat iz liste odeljena i jedan objekat iz liste higijeničara i zatim se klikne na dugme
+
+Prilikom unošenja matičnog broja potrebno je uneti 13 cifara
+
+(može se desiti da je potrebno kada se skine zip da se ide u properties i da se čekira Unblock da ne bi izbacivalo errore)
+
+
+projekat je kompletno testiran i sve je radilo, ukoliko se desi da nešto ne radi možemo Vam dostaviti i veći zip (packages i sl) koji nismo mogli predati zbog veličine

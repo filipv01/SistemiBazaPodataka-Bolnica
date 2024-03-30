@@ -1,0 +1,5 @@
+C:\Users\Asus\Desktop\BolnicaWebAPI\DatabaseAccess\obj\Debug\net7.0\BolnicaClassLibrary.csproj.AssemblyReference.cache
+C:\Users\Asus\Desktop\BolnicaWebAPI\DatabaseAccess\obj\Debug\net7.0\BolnicaClassLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\Desktop\BolnicaWebAPI\DatabaseAccess\obj\Debug\net7.0\BolnicaClassLibrary.AssemblyInfoInputs.cache
+C:\Users\Asus\Desktop\BolnicaWebAPI\DatabaseAccess\obj\Debug\net7.0\BolnicaClassLibrary.AssemblyInfo.cs
+C:\Users\Asus\Desktop\BolnicaWebAPI\DatabaseAccess\obj\Debug\net7.0\BolnicaClassLibrary.csproj.CoreCompileInputs.cache
